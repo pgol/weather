@@ -1,5 +1,6 @@
 const YQL = require('YQL');
 const Hapi = require('hapi');
+const _ = require('lodash');
 const yqlQueryBuilder = require('./services/yqlQueryBuilder');
 const dataTransformer = require('./services/dataTransformer');
 
@@ -31,13 +32,7 @@ server.route({
   method: 'GET',
   path: '/weather',
   handler: (req, res) => {
-    let code;
-    if (Array.isArray(req.query.code)) {
-      code = req.query.code;
-    } else {
-      code = [req.query.code];
-    }
-    getWeather(code).then(weather => {
+    getWeather(_.castArray(req.query.code)).then(weather => {
       res(dataTransformer.transformWeatherData(weather));
     });
   }
