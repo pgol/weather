@@ -5,6 +5,7 @@
   "dependencies": {
     "axios": "^0.16.1",
     "bulma": "^0.4.0",
+    "font-awesome": "^4.7.0",
     "material-ui": "^0.17.4",
     "qs": "^6.4.0",
     "react": "^15.5.4",

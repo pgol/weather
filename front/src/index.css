@@ -14,3 +14,26 @@ body {
 .place-picker-item {
   margin-right: 0.75rem;
 }
+
+.fa {
+  margin: 0 0.3rem;
+}
+
+.temps {
+  white-space: nowrap;
+}
+
+.items {
+  display: flex;
+  flex-wrap: wrap;
+}
+.item {
+  min-width: 180px;
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 600px) {
+  .hidden-mobile {
+    display: none;
+  }
+}

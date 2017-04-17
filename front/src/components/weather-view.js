@@ -11,7 +11,7 @@ class WeatherView extends Component {
     const weatherObject = get(this.props.weatherData, 'data.0', []);
     return (
       <div className="container">
-        <h1 className="title is-1 is-spaced">Weather info</h1>
+        <h1 className="title is-1 is-spaced hidden-mobile">Weather info</h1>
         <PlacePicker
           selectedPlace={this.props.selectedPlace}
           placesList={this.props.placesList}

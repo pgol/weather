@@ -15,7 +15,7 @@ const defaultState = {
     {
       id: 3,
       name: 'San Francisco',
-      code: '94016'
+      code: '94114'
     }
   ],
   selectedPlace: {

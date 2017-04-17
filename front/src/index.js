@@ -6,6 +6,7 @@ import injectTapEventPlugin from 'react-tap-event-plugin';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import store from './redux/store';
 import 'bulma/css/bulma.css';
+import 'font-awesome/css/font-awesome.css'
 import './index.css';
 
 //for Material-UI
