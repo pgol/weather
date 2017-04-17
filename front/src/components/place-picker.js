@@ -2,7 +2,7 @@ import React from 'react'
 import SelectField from 'material-ui/SelectField';
 import MenuItem from 'material-ui/MenuItem';
 
-function PlacePicker({selectedPlace, placesList, onSelectedPlace, onButtonClick}) {
+function PlacePicker({selectedPlace, placesList, onSelectedPlace, onButtonClick, isLoading}) {
   const menuItems = placesList.map(p => (
     <MenuItem value={p.code} key={p.id} primaryText={p.name}/>
   ));
@@ -19,7 +19,7 @@ function PlacePicker({selectedPlace, placesList, onSelectedPlace, onButtonClick}
       </div>
       <div className="level-item">
         <button
-          className="button is-primary"
+          className={'button is-primary ' + (isLoading ? 'is-loading': '')}
           onClick={onButtonClick.bind(this, selectedPlace.code)}
         >
           Get Weather

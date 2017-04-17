@@ -17,6 +17,7 @@ class WeatherView extends Component {
           placesList={this.props.placesList}
           onSelectedPlace={this.props.onSelectedPlace}
           onButtonClick={this.props.onButtonClick}
+          isLoading={this.props.isLoading}
         />
         <WeatherInfo
           weatherData={weatherObject}
@@ -29,7 +30,8 @@ class WeatherView extends Component {
 const mapStateToProps = state => ({
   placesList: state.places.placesList,
   selectedPlace: state.places.selectedPlace,
-  weatherData: state.weather.weatherData
+  weatherData: state.weather.weatherData,
+  isLoading: state.weather.loading
 });
 
 const mapDispatchToProps = (dispatch, store) => ({
