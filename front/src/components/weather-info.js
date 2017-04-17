@@ -9,7 +9,7 @@ function WeatherInfo({ weatherData }) {
       <h2>Select place to get weather</h2>
     )
   } else {
-    const { item, wind, atmosphere, astronomy } = weatherData;
+    const { location, item, wind, atmosphere, astronomy } = weatherData;
     const forecastItems = item.forecast.map(f => (
       <div key={v1()} className="column">
         <div>{f.day}</div>
@@ -19,7 +19,7 @@ function WeatherInfo({ weatherData }) {
     ));
     info = (
       <div>
-        <h4 className="title is-4 is-spaced">{item.title}</h4>
+        <h4 className="title is-4 is-spaced">{location.city}, {location.region}, {location.country}</h4>
         <div className="box">
           <h3 className="title is-3">Current Conditions</h3>
           <div className="columns">

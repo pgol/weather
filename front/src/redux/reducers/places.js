@@ -4,19 +4,24 @@ const defaultState = {
   placesList: [
     {
       id: 1,
-      name: 'SF',
+      name: 'New York',
       code: '10001'
     },
     {
       id: 2,
-      name: 'LA',
-      code: '10001'
+      name: 'Los Angeles',
+      code: '90001'
+    },
+    {
+      id: 3,
+      name: 'San Francisco',
+      code: '94016'
     }
   ],
   selectedPlace: {
-    id: 1,
-    name: 'SF',
-    code: '10001'
+    id: 3,
+    name: 'San Francisco',
+    code: '94016'
   }
 };
 

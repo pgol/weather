@@ -1,4 +1,5 @@
 const YQL = require('YQL');
+const Boom = require('Boom');
 const Hapi = require('hapi');
 const _ = require('lodash');
 const yqlQueryBuilder = require('./services/yqlQueryBuilder');
@@ -42,7 +43,11 @@ server.route({
   handler: (req, res) => {
     getWeather(_.castArray(req.query.code))
       .then(weather => {
+        if (weather.query.count === 0) {
+          res(Boom.notFound('Weather not found'));
+        }
         res(dataTransformer.transformWeatherData(weather));
-      });
+      })
+      .catch(err => res(Boom.internal('Internal Server Error')));
   }
 });
