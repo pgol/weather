@@ -37,7 +37,6 @@ const outputFormat = {
 };
 
 test('transformWeatherData', () => {
-  console.log(dataTransformer.transformWeatherData(dataMock));
   expect(
     dataTransformer.transformWeatherData(dataMock)
   ).toMatchObject(outputFormat)
