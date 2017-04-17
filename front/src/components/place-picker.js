@@ -8,24 +8,22 @@ function PlacePicker({selectedPlace, placesList, onSelectedPlace, onButtonClick}
   ));
   return (
     <div className="level">
-      <div className="level-left">
-        <div className="level-item">
-          <SelectField
-            floatingLabelText="Select place"
-            value={selectedPlace.code}
-            onChange={onSelectedPlace}
-          >
-            {menuItems}
-          </SelectField>
-        </div>
-        <div className="level-item">
-          <button
-            className="button is-primary"
-            onClick={onButtonClick.bind(this, selectedPlace.code)}
-          >
-            Get Weather
-          </button>
-        </div>
+      <div className="level-item">
+        <SelectField
+          floatingLabelText="Select place"
+          value={selectedPlace.code}
+          onChange={onSelectedPlace}
+        >
+          {menuItems}
+        </SelectField>
+      </div>
+      <div className="level-item">
+        <button
+          className="button is-primary"
+          onClick={onButtonClick.bind(this, selectedPlace.code)}
+        >
+          Get Weather
+        </button>
       </div>
     </div>
   )
