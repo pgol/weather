@@ -2,6 +2,9 @@
   "name": "front",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": "7.8.x"
+  },
   "dependencies": {
     "axios": "^0.16.1",
     "bulma": "^0.4.0",

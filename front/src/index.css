@@ -6,15 +6,6 @@ body {
   font-size: 14px;
 }
 
-.place-picker {
-  display: flex;
-  align-items: center;
-}
-
-.place-picker-item {
-  margin-right: 0.75rem;
-}
-
 .fa {
   margin: 0 0.3rem;
 }
@@ -36,4 +27,8 @@ body {
   .hidden-mobile {
     display: none;
   }
+}
+
+.error-box i {
+  color: red;
 }

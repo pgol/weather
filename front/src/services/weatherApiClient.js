@@ -5,7 +5,6 @@ const weatherFetcher = dataFetcher({
 });
 
 function getWeather(postalCodes) {
-  console.log(postalCodes);
   return weatherFetcher.getData('/weather', {
     code: postalCodes
   })

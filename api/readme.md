@@ -1,6 +1,6 @@
 
-
 - [Available Scripts](#available-scripts)
   - [npm start](#npm-start)
+  - [npm dev](#npm-test)
   - [npm test](#npm-test)
-  - [npm run build](#npm-run-build)
+  - [npm test-dev](#npm-test)
