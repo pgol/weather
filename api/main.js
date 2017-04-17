@@ -20,7 +20,15 @@ function getWeather(codes) {
 }
 
 const server = new Hapi.Server();
-server.connection({ port: 3000, host: 'localhost' });
+
+server.connection({
+  port: 3001,
+  host: 'localhost',
+  routes: {
+    cors: true
+  }
+});
+
 server.start(err => {
   if (err) {
     throw err;
@@ -32,8 +40,9 @@ server.route({
   method: 'GET',
   path: '/weather',
   handler: (req, res) => {
-    getWeather(_.castArray(req.query.code)).then(weather => {
-      res(dataTransformer.transformWeatherData(weather));
-    });
+    getWeather(_.castArray(req.query.code))
+      .then(weather => {
+        res(dataTransformer.transformWeatherData(weather));
+      });
   }
 });
